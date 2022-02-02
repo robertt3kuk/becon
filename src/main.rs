@@ -1,6 +1,7 @@
 use std::io;
 
 fn main() {
+    loop{
     let mut first = String::new();
     io::stdin()
         .read_line(&mut first)
@@ -17,7 +18,7 @@ fn main() {
         .expect("please put the number");
     let second: i32 = second.trim().parse().expect("please put the number");
     let operator: char = operator.chars().nth(0).unwrap();
-    println!("{}", form(first, operator, second))
+    println!("{}", form(first, operator, second))}
 }
 fn form(first: i32, operator: char, second: i32) -> String {
     match operator {
